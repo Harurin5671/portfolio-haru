@@ -1,0 +1,32 @@
+---
+import type { ActionError, ActionInputError } from 'astro:actions'
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXPERIENCE = [
+  {
+    date: 'Actualmente...',
+    title: 'Desarrollador móvil',
+    company: 'Sof.ia',
+    description:
+      'Responsable de la plataforma',
+    link: 'https://twitch.tv/midudev',
+  },
+  {
+    date: 'Septiembre 2022',
+    title: 'Principal Frontend Engineer',
+    company: 'Adevinta Spain',
+    description:
+      'Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.',
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
