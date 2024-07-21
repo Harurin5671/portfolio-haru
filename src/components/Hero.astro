@@ -1,0 +1,47 @@
+---
+const personalImageAlt = 'Frank Santos'
+import Badge from '@/components/Badge.astro'
+import LinkedInIcon from '@/icons/LinkedIn.astro'
+import MailIcon from '@/icons/Mail.astro'
+import SocialPill from '@/components/SocialPill.astro'
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/frank-santos.webp"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/frank-santos-80a84015b"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-100"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, soy Frank Santos
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    2 años de experiencia. <strong
+      >Desarrolador Web, Móvil.</strong
+    > De Lima, Perú. Especializado en el desarrollo de app móviles y páginas web.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:frankcito639@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/frank-santos-80a84015b">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>
