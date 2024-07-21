@@ -110,6 +110,27 @@ const { description, title } = Astro.props
           }
         }
       }
+      /* Estilos para el indicador de actualización */
+      body.refreshing {
+        cursor: wait;
+      }
+
+      .refresh-indicator {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #f0f0f0;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      body.refreshing .refresh-indicator {
+        display: block;
+      }
     </style>
+    <script is:inline src="/pullToRefresh.ts"></script>
   </body>
 </html>
