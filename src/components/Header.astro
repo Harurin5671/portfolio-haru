@@ -34,7 +34,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="relative block px-2 py-2 transition hover:text-violet-900 dark:hover:text-yellow-400"
           aria-label={link.label}
           href={link.url}
         >
@@ -50,15 +50,47 @@ const navItems = [
   document.addEventListener('astro:page-load', () => {
     const sections = document.querySelectorAll('section')
     const navItems = document.querySelectorAll('header nav a')
+    let themePreference = localStorage.getItem('theme') || 'system'
+
+    document.addEventListener('themeChange', (e) => {
+      const customEvent = e as CustomEvent
+      const theme = customEvent.detail.theme
+      themePreference = theme || 'system'
+      navItems.forEach((item) => {
+        if (theme === 'light') {
+          if (item.classList.contains('text-violet-900')) {
+            item.classList.remove('text-violet-900')
+          }
+          if (item.classList.contains('text-yellow-500')) {
+            item.classList.remove('text-yellow-500')
+          }
+        } else {
+          if (item.classList.contains('text-yellow-500')) {
+            item.classList.remove('text-yellow-500')
+          }
+          if (item.classList.contains('text-violet-900')) {
+            item.classList.remove('text-violet-900')
+          }
+        }
+      })
+    })
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
-            if (item.getAttribute('aria-label') == entry.target.id) {
-              item.classList.add('text-yellow-500')
+            if (themePreference === 'light') {
+              if (item.getAttribute('aria-label') == entry.target.id) {
+                item.classList.add('text-violet-900')
+              } else {
+                item.classList.remove('text-violet-900')
+              }
             } else {
-              item.classList.remove('text-yellow-500')
+              if (item.getAttribute('aria-label') == entry.target.id) {
+                item.classList.add('text-yellow-500')
+              } else {
+                item.classList.remove('text-yellow-500')
+              }
             }
           })
         }
@@ -85,6 +117,8 @@ const navItems = [
         })
       }
     }
+
+    const nav = document.querySelector<HTMLElement>('header nav')
   })
 </script>
 
