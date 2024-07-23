@@ -1,6 +1,5 @@
 ---
 const personalImageAlt = 'Frank Santos'
-import Badge from '@/components/Badge.astro'
 import LinkedInIcon from '@/icons/LinkedIn.astro'
 import GitHubIcon from '@/icons/GitHub.astro'
 import MailIcon from '@/icons/Mail.astro'
@@ -32,10 +31,10 @@ import SocialPill from '@/components/SocialPill.astro'
       </a> -->
     </div>
     <header class="lg:w-4/5">
-      <h1
-        class="text-3xl font-bold lg:text-5xl text-dark-700 dark:text-dark-200"
-      >
-        Hola, <span class=" text-primary-700 dark:text-primary-400">soy Frank</span>
+      <h1 class="text-3xl font-bold lg:text-5xl text-black dark:text-white">
+        Hola, <span class="text-primary-700 dark:text-primary-400"
+          >soy Frank</span
+        >
       </h1>
       <span
         class="font-semibold inline-flex animate-background-shine bg-[linear-gradient(110deg,#4c1d95,45%,#a0aec0,55%,#4c1d95)] dark:bg-[linear-gradient(110deg,#facc15,45%,#0f172a,55%,#facc15)] bg-[length:250%_100%] bg-clip-text text-xl text-transparent"
@@ -43,14 +42,18 @@ import SocialPill from '@/components/SocialPill.astro'
         Desarrollador Fullstack
       </span>
       <h2
-        class="lg:text-xl mt-6 md:mt-10 text-dark-700 dark:text-dark-200 text-pretty"
+        class="lg:text-xl mt-6 md:mt-10 text-black dark:text-white text-pretty"
       >
         2 años de experiencia.
         <span class="font-semibold text-violet-900 dark:text-yellow-400">
           Estudiante de Ingeniería Mecatrónica, Desarrollador Web y Móvil
         </span>
         .
-        <span> Especializado en Crear Soluciones Web y Móviles Robustas </span>
+        <span
+          class="lg:text-xl mt-6 md:mt-10 text-black dark:text-white text-pretty"
+        >
+          Especializado en Crear Soluciones Web y Móviles Robustas
+        </span>
         .
       </h2>
     </header>
@@ -75,31 +78,6 @@ import SocialPill from '@/components/SocialPill.astro'
       </SocialPill>
     </li>
   </ul>
-  <!-- <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-    >
-      Hey, soy Frank Santos
-    </h1>
-    <p
-      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-violet-900 [&>strong]:font-semibold dark:text-gray-300"
-    >
-      2 años de experiencia. <strong>Desarrolador Web, Móvil.</strong> De Lima, Perú.
-      Especializado en el desarrollo de app móviles y páginas web.
-    </p>
-    <nav class="flex flex-wrap gap-4 mt-8">
-      <SocialPill href="https://www.linkedin.com/in/frank-santos-80a84015b">
-        <LinkedInIcon class="size-4" />
-        LinkedIn
-      </SocialPill>
-      <SocialPill href="https://github.com/Harurin5671">
-        <GitHubIcon class="size-4" />
-        Github
-      </SocialPill>
-      <SocialPill href="mailto:frankcito639@gmail.com">
-        <MailIcon class="size-4" />
-        frankcito639@gmail.com
-      </SocialPill>
-    </nav> -->
   <div class="absolute hidden md:flex bottom-4 w-full justify-center">
     <a
       href="#experiencia"
