@@ -7,46 +7,118 @@ import MailIcon from '@/icons/Mail.astro'
 import SocialPill from '@/components/SocialPill.astro'
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/frank-santos.webp"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://www.linkedin.com/in/frank-santos-80a84015b"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+<section
+  class="relative mx-auto container px-2 pt-44 lg:h-screen overflow-hidden lg:pt-0 lg:w-[740px] lg:flex lg:flex-col lg:justify-center"
+>
+  <div
+    class="text-left lg:flex lg:flex-row-reverse lg:justify-center lg:items-center md:gap-x-4"
+  >
+    <div class="Hero-image flex justify-center mb-6 w-16 lg:w-1/5">
+      <img
+        src="https://avatars.githubusercontent.com/u/77626612?s=96&v=4"
+        width={200}
+        height={200}
+        class="drop-shadow-sm w-[130px] rounded-full object-contain shadow-lg dark:shadow-dark-900"
+        loading="lazy"
+        alt={personalImageAlt}
+      />
+      <!-- <a
+        href="https://www.linkedin.com/in/frank-santos-80a84015b"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center transition md:justify-center md:hover:scale-105"
+      >
+        <Badge>Disponible para trabajar</Badge>
+      </a> -->
+    </div>
+    <header class="lg:w-4/5">
+      <h1
+        class="text-3xl font-bold lg:text-5xl text-dark-700 dark:text-dark-200"
+      >
+        Hola, <span class=" text-primary-700 dark:text-primary-400">soy Frank</span>
+      </h1>
+      <span
+        class="font-semibold inline-flex animate-background-shine bg-[linear-gradient(110deg,#4c1d95,45%,#a0aec0,55%,#4c1d95)] dark:bg-[linear-gradient(110deg,#facc15,45%,#0f172a,55%,#facc15)] bg-[length:250%_100%] bg-clip-text text-xl text-transparent"
+      >
+        Desarrollador Fullstack
+      </span>
+      <h2
+        class="lg:text-xl mt-6 md:mt-10 text-dark-700 dark:text-dark-200 text-pretty"
+      >
+        2 años de experiencia.
+        <span class="font-semibold text-violet-900 dark:text-yellow-400">
+          Estudiante de Ingeniería Mecatrónica, Desarrollador Web y Móvil
+        </span>
+        .
+        <span> Especializado en Crear Soluciones Web y Móviles Robustas </span>
+        .
+      </h2>
+    </header>
+  </div>
+  <ul class="mt-10 flex flex-wrap gap-4 justify-start">
+    <li>
+      <SocialPill href="https://www.linkedin.com/in/frank-santos-80a84015b">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </SocialPill>
+    </li>
+    <li>
+      <SocialPill href="https://github.com/Harurin5671">
+        <GitHubIcon class="size-4" />
+        Github
+      </SocialPill>
+    </li>
+    <li>
+      <SocialPill href="mailto:frankcito639@gmail.com">
+        <MailIcon class="size-4" />
+        frankcito639@gmail.com
+      </SocialPill>
+    </li>
+  </ul>
+  <!-- <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      <Badge>Disponible para trabajar</Badge>
+      Hey, soy Frank Santos
+    </h1>
+    <p
+      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-violet-900 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      2 años de experiencia. <strong>Desarrolador Web, Móvil.</strong> De Lima, Perú.
+      Especializado en el desarrollo de app móviles y páginas web.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <SocialPill href="https://www.linkedin.com/in/frank-santos-80a84015b">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/Harurin5671">
+        <GitHubIcon class="size-4" />
+        Github
+      </SocialPill>
+      <SocialPill href="mailto:frankcito639@gmail.com">
+        <MailIcon class="size-4" />
+        frankcito639@gmail.com
+      </SocialPill>
+    </nav> -->
+  <div class="absolute hidden md:flex bottom-4 w-full justify-center">
+    <a
+      href="#experiencia"
+      class="md:flex gap-2 animate-bounce text-violet-900 dark:text-yellow-400 font-bold"
+    >
+      Experiencia
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"></path>
+      </svg>
     </a>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Hey, soy Frank Santos
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-violet-900 [&>strong]:font-semibold dark:text-gray-300"
-  >
-    2 años de experiencia. <strong
-      >Desarrolador Web, Móvil.</strong
-    > De Lima, Perú. Especializado en el desarrollo de app móviles y páginas web.
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:frankcito639@gmail.com">
-      <MailIcon class="size-4" />
-      Contáctame
-    </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/frank-santos-80a84015b">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialPill>
-    <SocialPill href="https://github.com/Harurin5671">
-      <GitHubIcon class="size-4" />
-      Github
-    </SocialPill>
-  </nav>
-</div>
+</section>

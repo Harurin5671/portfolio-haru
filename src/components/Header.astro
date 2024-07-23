@@ -26,23 +26,26 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full z-20 top-0 left-0flex items-center justify-center mx-auto"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="lg:max-w-[1114px] flex flex-wrap mx-auto py-4 font-medium rounded-full text-black dark:text-gray-200 text-[11px] md:text-lg"
   >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-violet-900 dark:hover:text-yellow-400"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
-    <ThemeToggle />
+    <nav class="container flex flex-row items-center justify-around">
+      {
+        navItems.map((link) => (
+          <a
+            class="relative overflow-hidden block px-2 py-2 z-10 p-2   hover:text-violet-900 dark:hover:text-yellow-400 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:backdrop-blur-lg before:rounded-lg rounded-xl before:-z-10 before:transition-all before:duration-500 before:hover:w-full  transition-all duration-300dark:hover:text-yellow-400 
+      before:bg-violet-900 dark:before:bg-yellow-400 font-semibold"
+            aria-label={link.label}
+            href={link.url}
+          >
+            {link.title}
+          </a>
+        ))
+      }
+      <ThemeToggle />
+    </nav>
   </nav>
 </header>
 
@@ -131,7 +134,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+      /* @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10; */
     }
   }
 </style>

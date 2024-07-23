@@ -1,10 +1,13 @@
 ---
 import ExperienceItem from './ExperienceItem.astro'
+import LinkInline from '@/components/LinkInLine.astro'
+import SectionTitle from './SectionTitle.astro'
+import Briefcase from '@/icons/Briefcase.astro'
 
 const EXPERIENCE = [
   {
     date: 'Septiembre 2023 - Actualmente...',
-    title: 'Desarrollador móvil',
+    title: 'Desarrollador Móvil',
     company: 'Sof.ia',
     description:
       'Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de la aplicación. Mejora de un 30% en la entrega de software. Incrementó en un 50% las descargas y registros de la app mediante el uso de analítica enfocada en nuestro público objetivo. Implementó medidas de integración continua con terceros y socios. Despliegue en PlayStore y AppStore.',
@@ -21,12 +24,83 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class="relative mt-16">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
-</ol>
+<section
+  id="experiencia"
+  class="relative mx-auto container px-2 overflow-hidden lg:pt- lg:w-[740px] lg:flex lg:flex-col lg:justify-center pt-24"
+>
+  <!-- <h2 class="text-3xl font-bold text-dark-700 dark:text-primary-50">
+    Experiencia
+  </h2> -->
+  <SectionTitle label="Experiencia">
+    <Briefcase class="size-8" />
+  </SectionTitle>
+  <article class="container px-2 mt-10">
+    <ul class="relative border-l border-dark-400 dark:border-dark-700">
+      {
+        EXPERIENCE.map(({ title, company, date, description, link }) => (
+          <li class="mb-8 md:mb-6 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-dark-600 rounded-full -left-3 ring-8 ring-dark-50 dark:ring-dark-950 dark:bg-dark-600">
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 text-primary-100 dark:text-primary-100"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <h3 class="flex items-center gap-2 mb-1 text-lg font-semibold text-violet-900 dark:text-yellow-400">
+              {title}
+              <span class="dark:text-white text-dark-700 font-normal">-</span>
+              <span class="text-sm text-black dark:text-white">{company}</span>
+            </h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-primary-950/80 dark:text-primary-200/90">
+              {date}
+            </time>
+            <p class="mb-4 font-normal text-dark-700 dark:text-dark-200 text-base text-pretty">
+              {description}
+            </p>
+            <div>
+              {link && (
+                <LinkInline href={link}>
+                  Saber más
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 icon icon-tabler icon-tabler-chevron-right"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 6l6 6l-6 6" />
+                    </>
+                  </svg>
+                </LinkInline>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+  <!-- <ol>
+    {
+      EXPERIENCE.map((experience) => (
+        <li class="">
+          <ExperienceItem {...experience} />
+        </li>
+      ))
+    }
+  </ol> -->
+</section>

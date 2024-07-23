@@ -20,42 +20,36 @@ import ProfileCheck from '@/icons/ProfileCheck.astro'
   title="Portfolio de Frank Santos - Desarrollador y programador web y móvil con 2 años de experiencia"
   description="Contrata a Frank Santos para crear tu aplicación web o móvil. Desarrollador web y móvil especializado en la creación de aplicaciones únicas."
 >
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-        <slot />
-      </Hero>
-    </SectionContainer>
-    <div class="space-y-24">
-      <SectionContainer id="experiencia">
-        <h2
+  <main>
+    <Hero />
+    <SectionContainer>
+      <!-- <h2
           class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
         >
           <Briefcase class="size-8" />
           Experiencia laboral
-        </h2>
-        <Experience />
-      </SectionContainer>
+        </h2> -->
+      <Experience />
+    </SectionContainer>
 
-      <SectionContainer id="proyectos">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <CodeIcon class="size-7" />
-          Proyectos
-        </h2>
-        <Projects />
-      </SectionContainer>
+    <SectionContainer id="proyectos">
+      <!-- <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2> -->
+      <Projects />
+    </SectionContainer>
 
-      <SectionContainer id="sobre-mi">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-        >
-          <ProfileCheck class="size-8" />
-          Sobre mí
-        </h2>
-        <AboutMe />
-      </SectionContainer>
-    </div>
+    <SectionContainer id="sobre-mi">
+      <!-- <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2> -->
+      <AboutMe />
+    </SectionContainer>
   </main>
 </Layout>
