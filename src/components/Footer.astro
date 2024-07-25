@@ -3,27 +3,45 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer
-  class="opacity-80 m-4 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
+  class="container mx-auto px-2 lg:px-28 2xl:px-52 mt-14 mb-8"
 >
   <div
-    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
+    class="ounded-lg border-dark-100 dark:border-dark-700 shadow dark:shadow-dark-700 mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
   >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
       >© {currentYear}
-      <a href="https://midu.dev/" class="hover:underline">Frank Santos</a>. Casi
+      <a href="https://flowbite.com/" class="hover:underline">Frank Santos</a>. Casi
       todos los derechos reservados
     </span>
     <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
+      class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
     >
+    <li>
+      <a href="/#proyectos" class="mr-4 hover:underline md:mr-6">Proyectos</a>
+    </li>
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <a href="/#sobre-mi" class="mr-4 hover:underline md:mr-6">Sobre mí</a>
       </li>
       <li>
-        <a id="contacto" href="mailto:frankcito639@gmail.com" class="hover:underline"
+        <a id="contacto" href="mailto:frankcito639@gmail.com" class="mr-4 hover:underline md:mr-6"
           >Contacto</a
         >
       </li>
     </ul>
   </div>
+  <div class="mt-8 flex justify-center opacity-70">
+    <small class="text-dark-700 dark:text-dark-200 text-center">
+        {' '}
+        Inspirado en{' '}
+        <a
+            href="https://porfolio.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-primary-700 dark:text-primary-400 font-bold"
+        >
+            porfolio.dev
+        </a>{' '}
+        de <span class="font-bold">midudev</span>
+    </small>
+</div>
 </footer>
