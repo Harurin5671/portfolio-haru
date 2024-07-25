@@ -1,0 +1,149 @@
+---
+import Container from './Container.astro'
+import SectionTitle from './SectionTitle.astro'
+import SetStack from '@/components/SetStack'
+import HTMLIcon from '@/icons/Html.astro'
+import CSSIcon from '@/icons/Css.astro'
+import JavaScriptIcon from '@/icons/JavaScript.astro'
+import ReactIcon from '@/icons/React.astro'
+import TailwindIcon from '@/icons/Tailwind.astro'
+import FlutterIcon from '@/icons/Flutter.astro'
+import DartIcon from '@/icons/Dart.astro'
+import FigmaIcon from '@/icons/Figma.astro'
+import NodeJSIcon from '@/icons/NodeJS.astro'
+import ExpressIcon from '@/icons/Express.astro'
+import MongoDBIcon from '@/icons/MongoDB.astro'
+import PostgreSQLIcon from '@/icons/PostgreSQL.astro'
+import FirebaseIcon from '@/icons/Firebase.astro'
+import AstroIcon from '@/icons/AstroIcon.astro'
+import ExpoIcon from '@/icons/Expo.astro'
+import DockerIcon from '@/icons/Docker.astro'
+import GoIcon from '@/icons/Go.astro'
+import TypeScriptIcon from '@/icons/TypeScript.astro'
+import GitIcon from '@/icons/Git.astro'
+import GitHubIcon from '@/icons/GitHub.astro'
+import PostmanIcon from '@/icons/Postman.astro'
+import VSCodeIcon from '@/icons/VSCode.astro'
+import NpmIcon from '@/icons/Npm.astro'
+
+const MY_STACK = {
+  frontend: [
+    { name: 'HTML', icon: HTMLIcon },
+    { name: 'CSS', icon: CSSIcon },
+    { name: 'JavaScript', icon: JavaScriptIcon },
+    { name: 'ReactJS', icon: ReactIcon },
+    { name: 'Flutter', icon: FlutterIcon },
+    { name: 'Dart', icon: DartIcon },
+    { name: 'Tailwind', icon: TailwindIcon },
+    { name: 'Figma', icon: FigmaIcon },
+  ],
+  backend: [
+    { name: 'NodeJS', icon: NodeJSIcon },
+    { name: 'ExpressJS', icon: ExpressIcon },
+    { name: 'MongoDB', icon: MongoDBIcon },
+    { name: 'PostgreSQL', icon: PostgreSQLIcon },
+    { name: 'Firebase', icon: FirebaseIcon },
+  ],
+  learning: [
+    { name: 'Astro', icon: AstroIcon },
+    { name: 'Expo - React Native', icon: ExpoIcon },
+    { name: 'Docker', icon: DockerIcon },
+    { name: 'Go', icon: GoIcon },
+    { name: 'TypeScript', icon: TypeScriptIcon },
+  ],
+  tools: [
+    { name: 'Git', icon: GitIcon },
+    { name: 'Github', icon: GitHubIcon },
+    { name: 'Postman', icon: PostmanIcon },
+    { name: 'VSCode', icon: VSCodeIcon },
+    { name: 'NPM', icon: NpmIcon },
+  ],
+}
+---
+
+<section class="pt-24 container mx-auto px-2 lg:w-[740px]">
+  <SectionTitle label="Tecnologías" />
+  <p
+    class="my-8 text-pretty md:text-lg max-w-[740px] text-dark-700 dark:text-dark-200"
+  >
+    En mi viaje por el
+    <span>mundo del desarrollo</span>, he cultivado
+    <span class="text-violet-900 dark:text-yellow-300"
+      >experiencia y habilidades</span
+    > en una variedad de tecnologías.
+    <span>Mi stack tecnológico incluye</span>
+    :
+  </p>
+  <section
+    class="grid lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:place-content-center"
+  >
+    <SetStack client:load>
+      <h3
+        class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#54fbff] to-[#00a4c9] dark:from-[#c9fffe] dark:to-[#00cfef] bg-clip-text text-transparent"
+      >
+        Frontend
+      </h3>
+      <ul class="grid grid-cols-3 gap-4">
+        {
+          MY_STACK.frontend.map((skill) => (
+            <li class="rounded-2xl  group flex flex-col fle justify-center items-center">
+              <skill.icon class="size-12 mb-2" />
+              <span class=" text-sm w-full text-center">{skill.name}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </SetStack>
+    <SetStack client:load reverse={true}>
+      <h3
+        class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#94a3b8] to-[#1e293b] dark:from-[#f1f5f9] dark:to-[#64748b] bg-clip-text text-transparent"
+      >
+        Backend
+      </h3>
+      <ul class="grid grid-cols-3 gap-4">
+        {
+          MY_STACK.backend.map((skill) => (
+            <li class="rounded-2xl  group flex flex-col fle justify-center items-center">
+              <skill.icon class="size-12 mb-2" />
+              <span class=" text-sm w-full text-center">{skill.name}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </SetStack>
+    <SetStack client:load>
+      <h3
+        class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#ffb272] to-[#ee4a08] dark:from-[#ffebd4] dark:to-[#fd6412] bg-clip-text text-transparent"
+      >
+        Aprendiendo
+      </h3>
+      <ul class="grid grid-cols-3 gap-4">
+        {
+          MY_STACK.learning.map((skill) => (
+            <li class="rounded-2xl  group flex flex-col fle justify-center items-center">
+              <skill.icon class="size-12 mb-2" />
+              <span class=" text-sm w-full text-center">{skill.name}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </SetStack>
+    <SetStack client:load reverse={true}>
+      <h3
+        class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#75dbff] to-[#0072ab] dark:from-[#def3ff] dark:to-[#00a8e8] bg-clip-text text-transparent"
+      >
+        Herramientas
+      </h3>
+      <ul class="grid grid-cols-3 gap-4">
+        {
+          MY_STACK.tools.map((skill) => (
+            <li class="rounded-2xl  group flex flex-col fle justify-center items-center">
+              <skill.icon class="size-12 mb-2" />
+              <span class=" text-sm w-full text-center">{skill.name}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </SetStack>
+  </section>
+</section>
