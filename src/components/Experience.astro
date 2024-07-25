@@ -21,6 +21,13 @@ const EXPERIENCE = [
       'Responsable de la plataforma, componentes para la creación y desarrollo de la página web. Se realizó tareas semanales de desarrollo front-end, cumpliendo consistentemente los plazos establecidos. Propuestas y aplicaciones de mejoras en el diseño y la funcionalidad del front-end, mejorando la experiencia del usuario.',
     link: 'https://aythen.com/',
   },
+  {
+    title: 'Aprendizaje autónomo',
+    date: '2020 - 2022',
+    company: 'Autónomo',
+    description:
+      'Empecé en el desarrollo web a través de mis clases y aprendiendo de forma autodidacta mediante cursos virtuales. Creé proyectos personales que me abrieron las puertas al mundo laboral en la industria TI.',
+  },
 ]
 ---
 
@@ -30,11 +37,7 @@ const EXPERIENCE = [
   </SectionTitle>
   <article class="container px-2 mt-10">
     <ul class="relative border-l border-dark-400 dark:border-dark-700">
-      {
-        EXPERIENCE.map((experience) => (
-          <ExperienceItem {...experience} />
-        ))
-      }
+      {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
     </ul>
   </article>
 </Container>
