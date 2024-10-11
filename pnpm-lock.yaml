@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/onest':
         specifier: ^5.0.4
         version: 5.0.4
+      '@fontsource/kalam':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -385,6 +388,9 @@ packages:
 
   '@fontsource-variable/onest@5.0.4':
     resolution: {integrity: sha512-AgdtsALwfkuLuL3dMCCX/ag27ho7yMKNIrkX5AKYKsPDm5u6mrTZ0LcO9jtMI7Z4ant7Huf9c2QtPdK3az/mow==}
+
+  '@fontsource/kalam@5.1.0':
+    resolution: {integrity: sha512-kR9RhDMFMpODN2Wfp+Ksbc2vpRRZiCugGn8FdckO2/qljWm+x7gOygMwlkz+d42p8HJt8iGq9airKncwH+PB/Q==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2504,6 +2510,8 @@ snapshots:
     optional: true
 
   '@fontsource-variable/onest@5.0.4': {}
+
+  '@fontsource/kalam@5.1.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
